@@ -1,0 +1,8 @@
+{
+  "name": "tindio",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

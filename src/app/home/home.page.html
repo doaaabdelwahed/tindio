@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-title>
+    Image Gallery
+  </ion-title>
+
+</ion-header>
+
+<ion-content padding>
+
+
+  <!-- Responsive Layout with Ion Grid-->
+  <ion-grid >
+    <ion-row>
+         <ion-col size="6" *ngFor="let image of productsData">
+            
+        <ion-card>
+            <img src="{{image.image.src}}">
+            <p>{{image.name}}</p>
+            <p>{{image.price}} {{image.currency}} - {{image.store_name}}</p>
+            
+          </ion-card>
+      
+      </ion-col> 
+    </ion-row>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" distance="10%"> 
+      <ion-infinite-scroll-content>
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+  </ion-grid>
+
+
+</ion-content>
